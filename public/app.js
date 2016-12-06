@@ -5,9 +5,9 @@ var init = function(container, center, zoom){
   var mainMap = new MapWrapper(container, center, 16);
   mainMap.addMarker(center);
   mainMap.addMarker(center2);
-
-
+  mainMap.addClickEvent();
 }
+
 
 
 
