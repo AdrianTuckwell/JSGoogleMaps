@@ -8,9 +8,18 @@ var init = function(container, center, zoom){
   mainMap.addMarker(center, infoString);
   mainMap.addMarker(center2, infoString2);
   mainMap.addClickEvent();
+
+  var button = document.querySelector('button');
+  // handleButtonClick is an event handler
+  button.onclick = handleButtonClick;
 }
 
 
 
+var handleButtonClick = function() {
+  var container = document.getElementById('main-map');
+  var center = {lat: 57.4778, lng: -4.2247};
+   var mainMap = new MapWrapper(container, center, 10);  
+}
 
 window.onload = init;
