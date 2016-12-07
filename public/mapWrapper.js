@@ -7,19 +7,17 @@ var MapWrapper = function(container,center, zoom){
 
 MapWrapper.prototype = {
   
-  addMarker: function(coords){
+  addMarker: function(coords, infoString){
     var marker = new google.maps.Marker({
       position: coords,
       map: this.googleMap
-    })
-    var contentString = "<p>Udny Station</p>";
+    });
     var infowindow = new google.maps.InfoWindow({
-      content: contentString
+      content: infoString
     });
     marker.addListener('click', function() {
     infowindow.open(this.googleMap, marker);
     });
-
   },
 
   addClickEvent: function(){
